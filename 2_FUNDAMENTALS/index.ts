@@ -30,3 +30,20 @@ fullName = firstName + " " + lastName;
 console.log(fullName);
 
 console.log(typeof lastName);
+
+// 3 - bullean
+let a: boolean = false;
+
+console.log(a);
+console.log(typeof a);
+
+// 4 - inference e annotation
+
+let ann: string = "teste";
+
+let inf = 'teste'
+
+// ann = 1
+// inf = 1
+
+console.log('testando')
