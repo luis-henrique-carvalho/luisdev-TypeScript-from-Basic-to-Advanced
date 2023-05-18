@@ -134,67 +134,83 @@ function userDetails(user: User) {
 userDetails({ name: 'Matheus', surname: 'Battisti' })
 
 // 13 - interfaces
- 
+interface Point {
+  x: number
+  y: number
+  z: number
+}
 
-// // 14 - interface x type alias
+function showCoords(obj: Point) {
+  console.log(`X: ${obj.x} Y: ${obj.y} Z: ${obj.z}` )
+}
 
-// interface Person {
-//   name: string
-// }
+const cordObj:Point = {
+  x: 10,
+  y: 15,
+  z: 20
+}
 
-// const randomNumber = 10
+showCoords(cordObj)
 
-// interface Person {
-//   age: number
-// }
+// 14 - interface x type alias
 
-// const somePerson: Person = { name: 'João', age: 25 }
+interface Person {
+  name: string
+}
 
-// console.log(somePerson)
+const randomNumber = 10
+
+interface Person {
+  age: number
+}
+
+const somePerson: Person = { name: 'João', age: 25 }
+
+console.log(somePerson)
+
+type personType = {
+  name: string
+}
 
 // type personType = {
-//   name: string
+//     age: number
 // }
 
-// // type personType = {
-// //     age: number
-// // }
+// 15 - literal types
+let test: 'testando'
 
-// // 15 - literal types
-// let test: 'testando'
+test = 'testando'
 
-// test = 'testando'
+// test = "opa"
 
-// // test = "opa"
+function showDirection(direction: 'left' | 'right' | 'center') {
+  console.log(`The direction is: ${direction}`)
+}
 
-// function showDirection(direction: 'left' | 'right' | 'center') {
-//   console.log(`The direction is: ${direction}`)
-// }
+showDirection('left')
+showDirection('center')
+//showDirection("up")
 
-// showDirection('left')
-// showDirection('center')
-// //showDirection("up")
+// 16 - non-null assertion
+const p = document.getElementById('some-p')
 
-// // 16 - non-null assertion
-// const p = document.getElementById('some-p')
+console.log(p!.innerText)
 
-// console.log(p!.innerText)
+// 17 - big int
 
-// // 17 - big int
+let n: bigint
 
-// let n: bigint
+// n = 1
 
-// // n = 1
+// n = 1000n
 
-// // n = 1000n
+// console.log(n + 1)
 
-// // console.log(n + 1)
+// console.log(n + 10n)
 
-// // console.log(n + 10n)
+// 17 - symbol
 
-// // 17 - symbol
+let symbolA = Symbol('a')
+let symbolB = Symbol('a')
 
-// let symbolA = Symbol('a')
-// let symbolB = Symbol('a')
-
-// console.log(symbolA === symbolB)
+console.log(symbolA === symbolB)

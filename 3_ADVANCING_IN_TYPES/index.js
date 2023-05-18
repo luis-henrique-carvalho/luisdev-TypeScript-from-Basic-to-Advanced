@@ -86,43 +86,41 @@ function userDetails(user) {
     console.log(`Sobrenome: ${user.surname}`);
 }
 userDetails({ name: 'Matheus', surname: 'Battisti' });
-// 13 - interfaces
-// // 14 - interface x type alias
-// interface Person {
-//   name: string
-// }
-// const randomNumber = 10
-// interface Person {
-//   age: number
-// }
-// const somePerson: Person = { name: 'João', age: 25 }
-// console.log(somePerson)
+function showCoords(obj) {
+    console.log(`X: ${obj.x} Y: ${obj.y} Z: ${obj.z}`);
+}
+const cordObj = {
+    x: 10,
+    y: 15,
+    z: 20
+};
+showCoords(cordObj);
+const randomNumber = 10;
+const somePerson = { name: 'João', age: 25 };
+console.log(somePerson);
 // type personType = {
-//   name: string
+//     age: number
 // }
-// // type personType = {
-// //     age: number
-// // }
-// // 15 - literal types
-// let test: 'testando'
-// test = 'testando'
-// // test = "opa"
-// function showDirection(direction: 'left' | 'right' | 'center') {
-//   console.log(`The direction is: ${direction}`)
-// }
-// showDirection('left')
-// showDirection('center')
-// //showDirection("up")
-// // 16 - non-null assertion
-// const p = document.getElementById('some-p')
-// console.log(p!.innerText)
-// // 17 - big int
-// let n: bigint
-// // n = 1
-// // n = 1000n
-// // console.log(n + 1)
-// // console.log(n + 10n)
-// // 17 - symbol
-// let symbolA = Symbol('a')
-// let symbolB = Symbol('a')
-// console.log(symbolA === symbolB)
+// 15 - literal types
+let test;
+test = 'testando';
+// test = "opa"
+function showDirection(direction) {
+    console.log(`The direction is: ${direction}`);
+}
+showDirection('left');
+showDirection('center');
+//showDirection("up")
+// 16 - non-null assertion
+const p = document.getElementById('some-p');
+console.log(p.innerText);
+// 17 - big int
+let n;
+// n = 1
+// n = 1000n
+// console.log(n + 1)
+// console.log(n + 10n)
+// 17 - symbol
+let symbolA = Symbol('a');
+let symbolB = Symbol('a');
+console.log(symbolA === symbolB);
